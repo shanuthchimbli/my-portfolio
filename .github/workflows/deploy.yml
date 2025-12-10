@@ -13,21 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-      - run: npm run build
+      - name: Build
+        run: npm run build
 
-      - uses: actions/configure-pages@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
-      - uses: actions/upload-pages-artifact@v1
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          # If your build output folder is dist, change to dist
-          path: ./dist
+          # change ./build -> ./dist if your build outputs to dist
+          path: ./build
 
-      - uses: actions/deploy-pages@v1
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
