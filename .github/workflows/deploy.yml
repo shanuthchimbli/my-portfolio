@@ -27,12 +27,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Show dist contents (debug)
+      - name: Debug dist folder
         run: |
-          echo "=== dist listing ==="
-          ls -la dist || true
-          echo "=== head of dist/index.html ==="
-          if [ -f dist/index.html ]; then head -n 40 dist/index.html; else echo "NO dist/index.html"; fi
+          echo "=== dist folder ==="
+          ls -la dist || echo "dist DOES NOT EXIST"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
