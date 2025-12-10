@@ -1,4 +1,4 @@
-import { Navigation } from "@/components/Navigation";
+import { Header } from "@/components/Header";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -12,8 +12,8 @@ import { Footer } from "@/components/sections/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <Header />
       <ThemeToggle />
-      <Navigation />
       
       <main>
         <Hero />
