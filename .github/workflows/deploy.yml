@@ -27,6 +27,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Show dist contents (debug)
+        run: |
+          echo "=== dist listing ==="
+          ls -la dist || true
+          echo "=== head of dist/index.html ==="
+          if [ -f dist/index.html ]; then head -n 40 dist/index.html; else echo "NO dist/index.html"; fi
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -36,8 +43,4 @@ jobs:
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # change ./build -> ./dist if your build outputs to dist
           path: ./dist
-
-      - name: Deploy to Pages
-        uses: actions/deploy-pages@v4
