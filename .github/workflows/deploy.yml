@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # change ./build -> ./dist if your build outputs to dist
-          path: ./build
+          path: ./dist
 
       - name: Deploy to Pages
         uses: actions/deploy-pages@v4
