@@ -1,9 +1,9 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shanuthchimbli.github.io/my-portfolio"
+  "homepage": "https://shanuthchimbli.github.io/my-portfolio/"
 ,
   "scripts": {
     "dev": "vite",
