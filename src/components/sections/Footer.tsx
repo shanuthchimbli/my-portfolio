@@ -12,7 +12,7 @@ export const Footer = () => {
             viewport={{ once: true }}
             className="text-sm text-muted-foreground flex items-center gap-1"
           >
-            Built with <Heart className="w-4 h-4 text-destructive" /> by Shanuth Chimbli
+            Designed by Shanuth Chimbli
           </motion.p>
 
           <motion.div
